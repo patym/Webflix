@@ -5,7 +5,7 @@ Desenvolvimento do Projeto WebFlix
 
 ### Objetivo ###
 
-* Criar uma plataforma de pesquisas de filmes e atores;
+* Criar uma plataforma de buscas de filmes por meio de atores;
 
 ### Justificativa ###
 
@@ -22,22 +22,22 @@ Desenvolvimento do Projeto WebFlix
 
 ### Contato ###
 
-* Patricia
+* Patrícia
 * inserir seu e-mail aqui
 * (51) xxxx -xxxx
 
 ### Mantenedores ###
 
-* Repositório mantido por Patricia
+* Repositório mantido por Patrícia e Bryan
 * Empresa responsável: WebFlix
 
 ### Desenvolvedores & Analistas de Conteúdo Intelectual ###
 
-* Patricia
-* colega 2
+* Patrícia
+* Bryan
 * colega 3
 * colega 4
 
 ### Desenvolvedor da Aplicação ###
 
-* Patricia
+* Patrícia e Bryan
