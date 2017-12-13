@@ -52,8 +52,8 @@ function getFilmesByName($filme_nome){
     unset($resultado['response']);
     unset($resultado['response_msg']);
   }
-//  echo "<pre>";
-// var_dump($resultado);
+
+
   return $resultado;
 }
 

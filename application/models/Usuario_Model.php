@@ -13,6 +13,12 @@ function getAtoresFavoritos($id) {
   return $this->db->select($sql);
 }
 
+function getNomeAtorFavorito($id){
+  $sql = "SELECT ator_nome FROM ator_favorito WHERE ator_usuario_id = {$id}";
+  return $this->db->select($sql);
+}
+
+
 function getFilmesFavoritos($id) {
   $sql = "SELECT * FROM filme_favorito WHERE filme_usuario_id = {$id}";
   return $this->db->select($sql);

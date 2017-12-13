@@ -9,6 +9,10 @@ class Usuario extends Controller {
 
 function index(){
 
+  $atorFavorito = $this->model->getNomeAtorFavorito($_SESSION[SESSION_LOGIN]->usu_id);
+
+  $this->view->recomendaFilmeByAtor = $this->recomendaFilmesByAtor($atorFavorito);
+  $this->view->ator_nomes = $atorFavorito;
   $this->view->render('usuario/index', 'usuario');
 }
 
@@ -160,6 +164,23 @@ function removeFavoritos(){
     }
   }
   $this->view->jsonEncode($retorno);
+}
+
+function recomendaFilmesByAtor($atorFavorito){
+  require_once 'library/IMDb.php';
+  $imdb = new IMDb();
+
+  $quantidade = count($atorFavorito);
+
+  for ($i=0; $i < $quantidade; $i++) {
+    $filmeRecomendado[$i] = $imdb->find_by_title($atorFavorito[$i]->ator_nome);
+
+    if($filmeRecomendado[$i]['response'] == 1){
+      unset($filmeRecomendado[$i]['response']);
+      unset($filmeRecomendado[$i]['response_msg']);
+    }
+  }
+  return $filmeRecomendado;
 }
 
 //Fecha Controller
